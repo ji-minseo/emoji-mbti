@@ -86,10 +86,17 @@
                 transition: background-color .3s linear;
                 cursor: pointer;
             }
+            @media screen and (max-width : $breakpoint-tablet) {
+               font-size: toVw(100px);
+               padding: toVw(53px) toVw(50px);
+   
+            }
             @media screen and (max-width : $breakpoint-mobile) {
                 width: 90%;
                bottom:80px;
                right: unset;
+               
+   
             }
 
         }
