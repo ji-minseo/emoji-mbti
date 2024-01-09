@@ -37,8 +37,24 @@
                 @include flex();
                 justify-content: space-between;
                 .__left, .__right {
-                    font-size: toVw(26px)!important;
-
+                    font-size: max(toVw(26px), 26px);
+                    @media screen and (max-width : $breakpoint-mobile) {
+                        font-size: 26px;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+                @media screen and (max-width : $breakpoint-mobile) {
+                    margin-top: 24px;
+                }
+                .__right {
+                    @media screen and (max-width : $breakpoint-mobile) {
+                        position: fixed;
+                        top: unset;
+                        bottom: 24px;
+                        left: 0;
+                        font-size: 17px;
+                    }
                 }
             }
         }
@@ -69,6 +85,10 @@
                 color: $color-white;
                 transition: background-color .3s linear;
                 cursor: pointer;
+            }
+            @media screen and (max-width : $breakpoint-mobile) {
+                
+               bottom:80px;
             }
 
         }
