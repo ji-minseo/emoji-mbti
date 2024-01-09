@@ -87,8 +87,9 @@
                 cursor: pointer;
             }
             @media screen and (max-width : $breakpoint-mobile) {
-                
+                width: 90%;
                bottom:80px;
+               right: unset;
             }
 
         }
