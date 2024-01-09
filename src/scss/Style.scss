@@ -253,10 +253,13 @@
       .button-wrap{
 
         button{
+          display: block;
           width : 100%;
+          padding: max(toVw(36px), 36px) max(toVw(10px), 10px);
           font-size: max(toVw(20px), 20px);
           line-height: 1.2;
           margin-bottom: max(toVw(17px), 17px);
+          border-radius: 150px;
         }
       }
 
