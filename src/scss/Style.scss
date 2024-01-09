@@ -83,13 +83,13 @@
             flex-direction: column;
             img {
                 animation-duration: 0.8s;
-                    height: toVw(428px);
+                    width:200vw;
                     display: block;
                     z-index: -10;
-                //     animation: marquee 25s linear infinite;
-                // &:nth-child(2) {
-                //     animation: marquee-r 25s linear infinite;
-                // }
+                    animation: marquee 25s linear infinite;
+                &:nth-child(2) {
+                    animation: marquee-r 25s linear infinite;
+                }
                 // &:nth-child(2) {
                 //     animation: pop 0.7s linear infinite;
 
@@ -250,18 +250,18 @@
 
   @keyframes marquee {
     0% {
-      transform: translateX(100vw);
+      transform: translateX(50vw);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50vw);
     }
 }
 
 @keyframes marquee-r {
     0% {
-      transform: translateX(-100vw);
+      transform: translateX(-50vw);
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(50vw);
     }
 }
