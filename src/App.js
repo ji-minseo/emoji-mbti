@@ -108,7 +108,9 @@ function App() {
         <div className='section-question'>
           <div className='title-wrap'>
             <div className='number'>Q{1}.</div>
-            <div className='txt'>놀고 집에 가는 길! 나와 같은 방향인 친구가 있다면?</div>
+            <div className='txt'>
+              놀고 집에 가는 길! 나와 같은 방향인 친구가 있다면?
+            </div>
           </div>
           <div className='button-wrap'>
             <button>혼자 가고 싶었는데ㅠ<br/> 어쩔 수 없지 뭐</button>

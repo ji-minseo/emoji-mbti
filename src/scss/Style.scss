@@ -226,35 +226,60 @@
 
     &-question{
       width: 80%;
-      // max-width: toVw(1200px);
+      max-width: 1200px;
+      font-family: 'Inter', sans-serif;
 
       .title-wrap{
         @include flex;
+        justify-content: flex-start;
+        margin-bottom: max(toVw(32px), 32px);
 
         .number{
           color: black;
-          font-size: toVw(200px);
+          font-size: max(toVw(100px), 100px);
           font-family: Inter;
           font-style: italic;
           font-weight: 900;
           word-wrap: break-word;
-          margin-right : toVw(61px);
+          margin-right : max(toVw(61px), 61px);
         }
         .txt{
-          font-size: toVw(60px);
+          font-size: max(toVw(30px), 30px);
           text-align: left;
           line-height: 1.2;
         }
       }
+
       .button-wrap{
-        @include flex;
-        // justify-content: space-between;
 
         button{
-          width : toVw(600px);
-          font-size: toVw(40px);
+          width : 100%;
+          font-size: max(toVw(20px), 20px);
           line-height: 1.2;
+          margin-bottom: max(toVw(17px), 17px);
         }
+      }
+
+      @media screen and (max-width : $breakpoint-mobile) {
+        width : 90%;
+        max-width: initial;
+
+        .title-wrap{
+          .number{
+            font-size: max(toVw(50px), 50px);
+            margin-right : max(toVw(10px), 10px);
+          }
+          .txt{
+            font-size: max(toVw(15px), 15px);
+          }
+        }
+        .button-wrap{
+          button{
+            font-size: max(toVw(13px), 13px);
+            margin-bottom: max(toVw(8px), 8px);
+          }
+        }
+
       }
     }
 }
