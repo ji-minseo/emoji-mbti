@@ -202,6 +202,40 @@
         margin-bottom: toEm(50px);
 
     }
+
+    &-question{
+      width: 80%;
+      // max-width: toVw(1200px);
+
+      .title-wrap{
+        @include flex;
+
+        .number{
+          color: black;
+          font-size: toVw(200px);
+          font-family: Inter;
+          font-style: italic;
+          font-weight: 900;
+          word-wrap: break-word;
+          margin-right : toVw(61px);
+        }
+        .txt{
+          font-size: toVw(60px);
+          text-align: left;
+          line-height: 1.2;
+        }
+      }
+      .button-wrap{
+        @include flex;
+        // justify-content: space-between;
+
+        button{
+          width : toVw(600px);
+          font-size: toVw(40px);
+          line-height: 1.2;
+        }
+      }
+    }
 }
 @keyframes pop{
     50%  {transform: scale(1.2);}
