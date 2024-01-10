@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
 import '../src/scss/Style.scss'
+import { useEffect, useState } from 'react';
+import Result from './Result';
 import {useMbtiListStore, useQuestionStore } from './Store';
+
 
 
 function App() {
@@ -40,7 +42,7 @@ console.log(questionList)
 
 			<div className='btn' onClick={()=>{setPage(1)}}>✨시작하기 ➧</div>
 		</div>
-    :
+    : page <=questionList.length ?
     <div className="section section-main">
       <div className='header'>
 
@@ -73,8 +75,8 @@ console.log(questionList)
             
           
         </div>
-
     </div>
+    : <Result/>
   )
 }
 
