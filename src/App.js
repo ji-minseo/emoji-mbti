@@ -1,5 +1,5 @@
 import '../src/scss/Style.scss'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Result from './Result';
 import Test from './Test';
 import Intro from './intro';
