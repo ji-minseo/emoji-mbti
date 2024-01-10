@@ -23,6 +23,10 @@ function Result() {
 
           <div className='__left'>
             ISTP
+            <div className='__mobilebtns'>
+              <button className='noborder'><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/kakao.png`} /></button>
+              <button className='noborder'><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/link.png`} /></button>
+            </div>
           </div>
           <div className='__right'>
             <div className='__description'>
