@@ -124,8 +124,8 @@ function App() {
             회의적이며 때로는 비판적이며 항상 분석적입니다
             </div>
             <div className='__btns'>
-              <button></button>
-              <button></button>
+              <button><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/kakao.png`} /></button>
+              <button><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/link.png`} /></button>
               <button>다시하기</button>
             </div>
           </div>
