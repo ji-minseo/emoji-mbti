@@ -35,7 +35,7 @@ function Result() {
             <div className='__btns'>
               <button className='noborder'><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/kakao.png`} /></button>
               <button className='noborder'><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/link.png`} /></button>
-              <button className='retry'>다시하기</button>
+              <button className='retry' onClick={()=>{window.onload()}}>다시하기</button>
             </div>
           </div>
         </div>

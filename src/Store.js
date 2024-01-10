@@ -1,14 +1,18 @@
-import {create} from "zustand";
+import create from "zustand";
 
-const useMbtiListStore = create(set=>({
+const useMbtiStore = create(set=>({
+  // page
+  page : 0,
+  setPage : (state)=>set({page : state}),
+
+  //mbtiList
   mbtiList :[
     {name : 'I', count :0},{name : 'E', count :0},{name : 'S', count :0},{name : 'N', count :0},
     {name : 'T', count :0},{name : 'F', count :0},{name : 'P', count :0},{name : 'J', count :0},
   ],
-  setMbtiList : (list)=>set(list)
-}))
+  setMbtiList : (state)=>set({mbtiList : [...state]}),
 
-const useQuestionStore = create(set=>({
+  //question
   questionList : [
     // I - E
     {q:['처음 보는 사람과 스몰토크 하는 것은'],
@@ -69,8 +73,8 @@ const useQuestionStore = create(set=>({
 
     {q:['당신의 MBTI는'],
     a:[{type : '', text : '테스트 결과 보러 가기'}]
-  }
-]
+    }
+  ]
 }))
 
-export {useMbtiListStore, useQuestionStore};
+export default useMbtiStore;
