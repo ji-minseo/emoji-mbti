@@ -368,6 +368,10 @@
             margin-left: max(toVw(69px), 69px);
             height: max(toVw(90px), 90px);
             font-size: max(toVw(30px), 30px);
+            &:hover {
+              background-color: #000;
+              color: $color-white;
+            }
             @media screen and (max-width : $breakpoint-mobile) {
               margin-left: 0;
               width: 100%;
@@ -379,6 +383,7 @@
         }
        }
        .emojis {
+        z-index: -1;
             position: relative;
             width: 100vw;
             height: 100vh;
