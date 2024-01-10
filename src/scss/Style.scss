@@ -292,6 +292,128 @@
 
       }
     }
+    &-result {
+       width: 80%;
+       max-width: 1200px;
+       @include flex();
+       align-items: flex-start;
+       .__left {
+        font-family: 'Inter';
+        font-size: max(toVw(200px),200px);
+        font-style: italic;
+        font-weight: 900;
+        margin-right: max(toVw(154px), 154px);
+       }
+       .__right {
+        .__description {
+          font-size: max(toVw(18px), 18px);
+          font-weight: 400;
+          margin-bottom: max(toVw(74px), 74px);
+          text-align: left;
+          line-height: 1.5;
+        }
+        .__btns {
+          @include flex();
+          button.noborder {
+            border: none;
+            padding: 0;
+            width: max(toVw(110px),110px);
+            img {
+              display: block;
+              width: 100%;
+            }
+          }
+          button.retry {
+            // padding: max(toVw(30px), 30px) max(toVw(83px), 83px);
+            width: max(toVw(276px), 276px);
+            margin-left: max(toVw(69px), 69px);
+            height: max(toVw(90px), 90px);
+            font-size: max(toVw(30px), 30px);
+          }
+        }
+       }
+       .emojis {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            @include flex();
+            flex-direction: column;
+            img {
+              position: fixed;
+              top: max(toVw(51px), 51px);
+                animation-duration: 0.8s;
+                    width:200vw;
+                    display: block;
+                    z-index: -10;
+                    animation: marquee 25s linear infinite;
+                &:nth-child(2) {
+                  top: unset;
+                  bottom: max(toVw(41px), 41px);
+                    animation: marquee-r 25s linear infinite;
+                }
+                // &:nth-child(2) {
+                //     animation: pop 0.7s linear infinite;
+
+                //     position: absolute;
+                //     left: toVw(389px);
+                //     top: toVw(212px);
+                //     width: toVw(268px);
+                // }
+                // &:nth-child(2) {
+                //     animation: pop 0.6s linear infinite;
+                //     width: toVw(200px);
+                //     position: absolute;
+                //     left: toVw(707px);
+                //     top: toVw(27px);
+                // }
+                // &:nth-child(3) {
+                //     animation: pop 0.8s linear infinite;
+                //     width: toVw(200px);
+                //     position: absolute;
+                //     left: toVw(1053px);
+                //     top: toVw(64px);
+                // }
+                // &:nth-child(4) {
+                //     animation: pop 0.9s linear infinite;
+                //     width: toVw(200px);
+                //     position: absolute;
+                //     left: toVw(1197px);
+                //     top: toVw(396px);
+                // }
+                // &:nth-child(5) {
+                //     animation: pop 0.5s linear infinite;
+                //     width: toVw(200px);
+                //     position: absolute;
+                //     left: toVw(913px);
+                //     top: toVw(750px);
+                // }
+                // &:nth-child(6) {
+                //     animation: pop 0.4s linear infinite;
+                //     width: toVw(200px);
+                //     position: absolute;
+                //     left: toVw(440px);
+                //     top: toVw(611px);
+                // }
+                // &:nth-child(7) {
+                //     animation: pop 0.6s linear infinite;
+                //     width: toVw(200px);
+                //     position: absolute;
+                //     left: toVw(389px);
+                //     top: toVw(212px);
+                // }
+            }
+            .card {
+                // box-shadow: 260px 52px 260px 0px rgba(9, 20, 50, 0.15);
+                // width: toVw(450px);
+                // height: toVw(950px);
+                // border-radius: toVw(32px);
+                // background-color: #CC00FF;
+            }
+        }
+    }
 }
 @keyframes pop{
     50%  {transform: scale(1.2);}
