@@ -4,7 +4,9 @@ import  useMbtiStore  from './Store';
 
 
 export default function Test(){
-  const {page, setPage, mbtiList, setMbtiList, questionList} = useMbtiStore();
+  const {page, setPage, mbtiList, setMbtiList, questionList, mbti, setResultCon} = useMbtiStore();
+  let MBTI;
+  // const [resultCon, setResultCon] = useState({});
 
   function handleCkAnswer(type, index){
     let ls = mbtiList;
@@ -12,7 +14,28 @@ export default function Test(){
   
     setMbtiList(ls);
     setPage(page + 1);    
-  } 
+
+    if(page === questionList.length-1){
+      MBTI =    
+          resultHandler('I', 'E') 
+        + resultHandler('S', 'N') 
+        + resultHandler('T', 'F') 
+        + resultHandler('P', 'J');
+
+        setResultCon(mbti.filter((el)=>el.mbti === MBTI)[0]);
+    }
+  }
+  
+  function resultHandler(txt1, txt2){
+    let type;
+
+    mbtiList.find((e)=>{return e.name == txt1}).count 
+    > mbtiList.find((e)=>{return e.name == txt2}).count
+    ? type = txt1 
+    : type= txt2;
+
+    return type;
+  }
 
   return <div className="section section-main">
       <div className='header'>
@@ -28,10 +51,10 @@ export default function Test(){
               questionList?.map((li, idx)=>{
                 { return page == idx + 1 &&
                 <Fragment key={idx}>
-                  <div className='title-wrap'>
+                  <div className={`title-wrap ${idx+1 >= questionList.length && 'test-end'}`}>
                     <div className='number'>Q{page}.</div>
                     <div className='txt'>{li.q[0]}</div>
-                  </div>   
+                  </div> 
                   <div className='button-wrap'>
                     {
                       li.a.map((el,index)=>
