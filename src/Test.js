@@ -1,5 +1,5 @@
 import '../src/scss/Style.scss'
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment } from 'react';
 import  useMbtiStore  from './Store';
 
 
@@ -29,8 +29,8 @@ export default function Test(){
   function resultHandler(txt1, txt2){
     let type;
 
-    mbtiList.find((e)=>{return e.name == txt1}).count 
-    > mbtiList.find((e)=>{return e.name == txt2}).count
+    mbtiList.find((e)=>{return e.name === txt1}).count 
+    > mbtiList.find((e)=>{return e.name === txt2}).count
     ? type = txt1 
     : type= txt2;
 
@@ -49,7 +49,7 @@ export default function Test(){
         <div className='section-question'>           
             {
               questionList?.map((li, idx)=>{
-                { return page == idx + 1 &&
+              {return page === idx + 1 &&
                 <Fragment key={idx}>
                   <div className={`title-wrap ${idx+1 >= questionList.length && 'test-end'}`}>
                     <div className='number'>Q{page}.</div>

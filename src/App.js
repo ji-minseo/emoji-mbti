@@ -7,7 +7,7 @@ import useMbtiStore from './Store';
 
 
 function App() {
-  const {page, setPage, questionList} = useMbtiStore();
+  const {page,questionList} = useMbtiStore();
 
   useEffect(()=>{
     console.log(page)

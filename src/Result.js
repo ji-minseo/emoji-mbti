@@ -1,4 +1,3 @@
-import { useState,useEffect } from 'react';
 import '../src/scss/Style.scss'
 import useMbtiStore from './Store';
 

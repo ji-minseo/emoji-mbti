@@ -1,10 +1,9 @@
 import '../src/scss/Style.scss'
-import { useEffect, useState } from 'react';
 import  useMbtiStore  from './Store';
 
 
 export default function Intro(){
-  const {page, setPage} = useMbtiStore();
+  const {setPage} = useMbtiStore();
 
   return <div className="section section-main">
     <div className='header'>
