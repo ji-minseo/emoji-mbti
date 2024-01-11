@@ -1,3 +1,5 @@
-<img width="1172" alt="Slice 1" src="https://github.com/ji-minseo/emoji-mbti/assets/58129595/aabfe331-4d07-44a4-b42f-1c046fe993f8">
+
+<img width="1172" alt="ㅇㅇ" src="https://github.com/ji-minseo/emoji-mbti/assets/58129595/a6d36c97-3c67-4226-a441-40a7f9c474dd">
+
 design : jmseo
 develop : nhhong
