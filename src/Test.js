@@ -10,7 +10,7 @@ export default function Test(){
 
   function handleCkAnswer(type, index){
     let ls = mbtiList;
-    ls.map((li,idx)=>{li.name === type && li.count++;})
+    ls.map((li)=> {return li.name === type && li.count++})
   
     setMbtiList(ls);
     setPage(page + 1);    
