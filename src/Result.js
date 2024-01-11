@@ -18,9 +18,9 @@ function Result() {
       content: {
         title: `내 MBTI는 ${resultCon.mbti}!!`,
         description:  `${resultCon.content}`, 
-        imageUrl: `https://emojimbti.netlify.app/images/${resultCon.mbti.toLowerCase()}.png`,
+        imageUrl: `https://emojimbti.netlify.app/images/re-${resultCon.mbti.toLowerCase()}.png`,
         link: {
-          mobileWebUrl: `https://emojimbti.netlify.app?result=${resultCon.mbti.toLowerCase()}`, 
+          mobileWebUrl: `https://emojimbti.netlify.app/`, 
           // webUrl: window.location.href
         }
       },
@@ -28,7 +28,7 @@ function Result() {
         {
           title: "더 자세히 보러가기",
           link: {
-            mobileWebUrl: `https://emojimbti.netlify.app?result=${resultCon.mbti.toLowerCase()}`,
+            mobileWebUrl: `https://emojimbti.netlify.app/`,
             // webUrl: window.location.href
           }
         }
