@@ -16,19 +16,19 @@ function Result() {
     Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: '이모지 스티커팩', // 인자값으로 받은 title
-        description: "나의 MBTI의 이모지는 어떤 모습일지이ㅏㄹ머;ㅣㄴ얼;ㅣ", 
-        imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+        title: `내 MBTI는 ${resultCon.mbti}!!`,
+        description:  `${resultCon.content}`, 
+        imageUrl: `https://emojimbti.netlify.app/images/${resultCon.mbti.toLowerCase()}.png`,
         link: {
-          mobileWebUrl: window.location.href, 
+          mobileWebUrl: `https://emojimbti.netlify.app?result=${resultCon.mbti.toLowerCase()}`, 
           // webUrl: window.location.href
         }
       },
       buttons: [
         {
-          title: "테스트하러 가보기",
+          title: "더 자세히 보러가기",
           link: {
-            mobileWebUrl: window.location.href,
+            mobileWebUrl: `https://emojimbti.netlify.app?result=${resultCon.mbti.toLowerCase()}`,
             // webUrl: window.location.href
           }
         }
