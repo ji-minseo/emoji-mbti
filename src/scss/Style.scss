@@ -307,6 +307,7 @@
         font-style: italic;
         font-weight: 900;
         margin-right: max(toVw(154px), 154px);
+        text-transform: uppercase;
         @media screen and (max-width : $breakpoint-mobile) {
           @include flex();
           font-size: 50px;

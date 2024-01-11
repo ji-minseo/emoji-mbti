@@ -26,8 +26,8 @@ function Result() {
         <div className='section-result'>
         <div className='emojis'>
             
-            <img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/infj.png`} />
-            <img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/infj.png`} />
+            <img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/images/${resultCon.mbti.toLowerCase()}.png`} />
+            <img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/images/${resultCon.mbti.toLowerCase()}.png`} />
   
           </div>
 
