@@ -1,5 +1,5 @@
 import '../src/scss/Style.scss'
-import { Fragment, useEffect } from 'react';
+import { Fragment } from 'react';
 import  useMbtiStore  from './Store';
 import { Link } from 'react-router-dom';
 

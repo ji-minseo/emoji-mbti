@@ -1,12 +1,8 @@
-import { useEffect } from 'react';
 import '../src/scss/Style.scss'
-import  useMbtiStore  from './Store';
 import { Link } from 'react-router-dom';
 
 
 export default function Intro(){
-  const {setPage} = useMbtiStore();
-
   return <div className="section section-main">
     <div className='header'>
 

@@ -8,7 +8,7 @@ function Result() {
   const {reset,  mbti} = useMbtiStore();
   const {Kakao} = window;
   const KAKAOKEY = 'd5a45aa11ca1775f9d9a83c615fa9f65';
-  const [MBTI, setMBTI] = useState(window.location.href.split('?mbti=')[1]);
+  const [MBTI] = useState(window.location.href.split('?mbti=')[1]);
 
   function shareKakao(){
     Kakao.cleanup();
