@@ -18,7 +18,7 @@ function Result() {
       content: {
         title: `내 MBTI는 ${resultCon.mbti}!!`,
         description:  `${resultCon.content}`, 
-        imageUrl: `https://emojimbti.netlify.app/images/re-${resultCon.mbti.toLowerCase()}.png`,
+        imageUrl: `https://emojimbti.netlify.app/images/share/${resultCon.mbti.toLowerCase()}.png`,
         link: {
           mobileWebUrl: `https://emojimbti.netlify.app/`, 
           // webUrl: window.location.href
