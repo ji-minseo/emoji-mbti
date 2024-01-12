@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import '../src/scss/Style.scss'
 import  useMbtiStore  from './Store';
+import { Link } from 'react-router-dom';
 
 
 export default function Intro(){
@@ -21,6 +23,7 @@ export default function Intro(){
     </div>
       <div className='credit'>20240109 jmseo, nhhong</div>
 
-    <div className='btn' onClick={()=>{setPage(1)}}>✨시작하기 ➧</div>
+   
+    <div className='btn'> <Link to='/test' > ✨시작하기 ➧</Link></div>
   </div>
 }

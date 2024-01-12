@@ -4,19 +4,21 @@ import Result from './Result';
 import Test from './Test';
 import Intro from './intro';
 import useMbtiStore from './Store';
+import { Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
-  const {page,questionList} = useMbtiStore();
-
-  useEffect(()=>{
-    console.log(page)
-  },[page])
+  const {page,questionList, resultCon} = useMbtiStore();
 
   return (
-    page === 0 ?  <Intro/>
-    : page <= questionList.length ? <Test/>
-    : <Result/>
+    <Routes>
+      <Route path="/" element={<Intro />} />
+      <Route path="/test" element={<Test />} />
+      <Route path={`/result`} element={<Result/>}/>
+    </Routes>
+
+   
   )
 }
 

@@ -1,10 +1,11 @@
 import '../src/scss/Style.scss'
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import  useMbtiStore  from './Store';
+import { Link } from 'react-router-dom';
 
 
 export default function Test(){
-  const {page, setPage, mbtiList, setMbtiList, questionList, mbti, setResultCon} = useMbtiStore();
+  const {page, setPage, mbtiList, setMbtiList, questionList, mbti, setResultCon, resultCon} = useMbtiStore();
   let MBTI;
   // const [resultCon, setResultCon] = useState({});
 
@@ -15,14 +16,15 @@ export default function Test(){
     setMbtiList(ls);
     setPage(page + 1);    
 
-    if(page === questionList.length-1){
+    if(page+1 === questionList.length-1){
+      console.log('실행')
       MBTI =    
           resultHandler('I', 'E') 
         + resultHandler('S', 'N') 
         + resultHandler('T', 'F') 
         + resultHandler('P', 'J');
 
-        setResultCon(mbti.filter((el)=>el.mbti === MBTI)[0]);
+        setResultCon(Object.keys(mbti).filter((el)=> el===MBTI)[0]);
     }
   }
   
@@ -49,16 +51,20 @@ export default function Test(){
         <div className='section-question'>           
             {
               questionList?.map((li, idx)=>{
-              return page === idx + 1 &&
+              return page === idx &&
                 <Fragment key={idx}>
                   <div className={`title-wrap ${idx+1 >= questionList.length && 'test-end'}`}>
-                    <div className='number'>Q{page}.</div>
+                    <div className='number'>Q{page + 1}.</div>
                     <div className='txt'>{li.q[0]}</div>
                   </div> 
                   <div className='button-wrap'>
                     {
                       li.a.map((el,index)=>
-                        {return <button key={index} onClick={()=>handleCkAnswer(el.type, idx)} >{el.text}</button>}
+                        {return (
+                          idx+1 >= questionList.length
+                          ? <Link key={index} className='last-btn' to={`/result?mbti=${resultCon?.toLowerCase()}`}>{el.text}</Link>
+                          : <button key={index} onClick={()=>handleCkAnswer(el.type, idx)} >{el.text}</button>
+                        )}
                       )
                     }
                   </div>    
