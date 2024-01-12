@@ -24,6 +24,6 @@ export default function Intro(){
       <div className='credit'>20240109 jmseo, nhhong</div>
 
    
-    <div className='btn'> <Link to='/test' > ✨시작하기 ➧</Link></div>
+    <Link to='/test'  className='btn'> ✨시작하기 ➧</Link>
   </div>
 }

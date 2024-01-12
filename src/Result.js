@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../src/scss/Style.scss'
 import useMbtiStore from './Store';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 function Result() {
@@ -42,11 +42,6 @@ function Result() {
     navigator.clipboard.writeText(window.location.href);
     alert("주소가 복사되었습니다.")
   }
-
-  function mbtiRestHandler(){
-    
-  }
-
 
 	return (
     <div className="section section-main">

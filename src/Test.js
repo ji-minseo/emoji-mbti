@@ -62,7 +62,7 @@ export default function Test(){
                       li.a.map((el,index)=>
                         {return (
                           idx+1 >= questionList.length
-                          ? <Link key={index} className='last-btn' to={`/result?mbti=${resultCon?.toLowerCase()}`}>{el.text}</Link>
+                          ? <Link key={index} to={`/result?mbti=${resultCon?.toLowerCase()}`}>  <button>{el.text}</button></Link>
                           : <button key={index} onClick={()=>handleCkAnswer(el.type, idx)} >{el.text}</button>
                         )}
                       )
