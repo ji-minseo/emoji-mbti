@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 
 function Result() {
-  const {resultCon, mbti} = useMbtiStore();
+  const {reset,  mbti} = useMbtiStore();
   const {Kakao} = window;
   const KAKAOKEY = 'd5a45aa11ca1775f9d9a83c615fa9f65';
   const [MBTI, setMBTI] = useState(window.location.href.split('?mbti=')[1]);
@@ -44,7 +44,7 @@ function Result() {
   }
 
   function mbtiRestHandler(){
-
+    
   }
 
 
@@ -80,7 +80,7 @@ function Result() {
             <div className='__btns'>
               <button className='noborder'><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/kakao.png`} onClick={()=>shareKakao()}/></button>
               <button className='noborder' onClick={()=>urlClip()}><img alt="weather" className="weather-icon" src={`${process.env.PUBLIC_URL}/link.png`} /></button>
-            <Link to='/'><button className='retry'>다시하기</button></Link>
+            <Link to='/' onClick={()=>{reset()}}><button className='retry'>다시하기</button></Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,19 @@
 import {create} from "zustand";
 
+const initalState = {
+  page : 0,
+  mbtiList :[
+    {name : 'I', count :0},{name : 'E', count :0},{name : 'S', count :0},{name : 'N', count :0},
+    {name : 'T', count :0},{name : 'F', count :0},{name : 'P', count :0},{name : 'J', count :0}
+  ],
+  resultCon : '',
+
+}
+
 const useMbtiStore = create(set=>({
+  //reset
+  reset : ()=>{set(initalState)},
+
   // page
   page : 0,
   setPage : (state)=>set({page : state}),
@@ -11,6 +24,9 @@ const useMbtiStore = create(set=>({
     {name : 'T', count :0},{name : 'F', count :0},{name : 'P', count :0},{name : 'J', count :0},
   ],
   setMbtiList : (state)=>set({mbtiList : [...state]}),
+
+  resultCon :'',
+  setResultCon : (state)=>set({resultCon : state}),
 
   //question
   questionList : [
@@ -128,8 +144,7 @@ const useMbtiStore = create(set=>({
     }
   },
 
-  resultCon :'',
-  setResultCon : (state)=>set({resultCon : state})
+ 
 }))
 
 export default useMbtiStore;
